@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProfileCard from '../components/profile-card';
 
 const URL = 'https://mcr-codes-cohorts.herokuapp.com/users/';
 
@@ -15,7 +16,9 @@ class Profile extends Component {
     fetch(`${URL}${this.state.username}`)
       .then(res => res.json())
       .then(data => {
+        console.log(data);
         return this.setState({ profileData: data });
+        
       });
   }
 
@@ -28,7 +31,15 @@ class Profile extends Component {
 
     return (
       <div>
-        <h1>display you component here!</h1>
+        <ProfileCard
+          name={this.state.profileData.profile.login}
+          avatar={this.state.profileData.profile.avatar}
+          url={this.state.profileData.profile.url}
+          repos={this.state.profileData.profile.repos}
+          following={this.state.profileData.profile.following}
+          location={this.state.profileData.profile.location}
+          company={this.state.profileData.profile.company}
+        />
       </div>
     );
   }
