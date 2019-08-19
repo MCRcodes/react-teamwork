@@ -26,8 +26,13 @@ class ProfilePage extends React.Component {
     return (
 
       <div className="profile__card">
-        <img src={this.state.user.profile.avatar} />
-        <Link to={`/${this.props.name}`}>{this.props.name}</Link>
+        <Link to={`/${this.props.name}`} className="profile__card-link">
+          <div
+            className="profile__card-avatar"
+            style={{ backgroundImage: `url(${this.state.user.profile.avatar})` }}
+          />
+          <span className="profile__card-name">{this.props.name}</span>
+        </Link>
       </div>
     );
   }
