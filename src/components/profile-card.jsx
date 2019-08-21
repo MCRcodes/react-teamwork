@@ -11,7 +11,7 @@ const ProfileCard = props => {
         <li><a href={props.url}>{props.url}</a></li>
         <li>Repos: {props.repos}</li>
         <li>following: {props.following}</li>
-        <li>Location:{props.location}</li>
+        {props.location ? (<li>Location: {props.location}</li>) : (null) }
         {props.company ? (<li>Company: {props.company}</li>) : (null) }
       </ul>
     </div>

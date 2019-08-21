@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ProfilePage from '../components/profile-page';
+
+import '../styles/main.scss';
 
 class Home extends React.Component {
   constructor(props) {
@@ -25,14 +27,20 @@ class Home extends React.Component {
       );
     }
     return (
-      this.state.usernames.map(user => {
-        return (
-          <Link to={`/${user}`} key={user}>{user}</Link>
-        );
-      })
+      <div className="container">
+        {
+          this.state.usernames.map(user => {
+            return (
+              <ProfilePage
+                key={user}
+                name={user}
+              />
+            );
+          })
+        }
+      </div>
     );
   }
-
 }
 
 export default Home;
