@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  string, number,
+} from 'prop-types';
 
 const RepoCard = props => {
   return (
@@ -17,6 +20,14 @@ const RepoCard = props => {
       <li>Repo Forks: {props.forks}</li>
     </div>
   );
+};
+
+RepoCard.propTypes = {
+  name: string.isRequired,
+  description: string,
+  language: string.isRequired,
+  stars: number.isRequired,
+  forks: number.isRequired,
 };
 
 export default RepoCard;

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile page should render ContributionSummary 1`] = `
+Object {
+  "contributions": Object {
+    "count": 2000,
+  },
+  "events": Object {
+    "count": 1000,
+  },
+  "username": "ersel",
+}
+`;
+
+exports[`Profile page should render ProfileCard 1`] = `
+<ProfileCard
+  profile={
+    Object {
+      "followers": 20,
+      "name": "ersel",
+    }
+  }
+  username="ersel"
+/>
+`;
+
+exports[`Profile page should render RepoList 1`] = `
+Object {
+  "repos": Array [
+    Object {
+      "name": "jQuery",
+    },
+  ],
+  "username": "ersel",
+}
+`;

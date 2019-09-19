@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contribution = (props) => {
+const ContributionSummary = (props) => {
   const { username, events, contributions } = props;
   const pushEvents = events.filter(event => event.type === 'PushEvent');
   const pullRequests = events.filter(event => event.type === 'PullRequestEvent');
@@ -23,4 +23,4 @@ const Contribution = (props) => {
   );
 };
 
-export default Contribution;
+export default ContributionSummary;

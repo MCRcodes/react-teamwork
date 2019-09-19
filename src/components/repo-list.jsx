@@ -8,6 +8,7 @@ const RepoList = (props) => {
     <div>{ repos.map((repo) => {
       return (
         <RepoCard
+          className="repoCardClass"
           key={repo.name}
           name={repo.name}
           description={repo.description}
