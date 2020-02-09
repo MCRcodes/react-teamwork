@@ -59,6 +59,7 @@
       "raf/polyfill",
       "<rootDir>/__jest__/setup.js"
     ],
-    "testEnvironment": "node"
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost/"
   }
 }
